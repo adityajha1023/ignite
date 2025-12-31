@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | IGNITE Techfest 2025 | IILM University</title>
+    <link rel="icon" href="/logo.png" type="image/png" />
+    <meta name="author" content="IILM University" />
+
+    <link rel="stylesheet" href="/globals.css" />
+    <link rel="stylesheet" href="/css/interactive-grid.css" />
+    <link rel="stylesheet" href="/css/transition.css" />
+    <link rel="stylesheet" href="/css/preloader.css" />
+    <link rel="stylesheet" href="/css/auth.css" />
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader-overlay">
+        <div class="preloader-grid"></div>
+        <div class="preloader-animation-wrapper">
+            <p class="preloader-text">Loading IGNITE</p>
+            <div class="preloader-ring-frame"></div>
+            <div class="preloader-disc-frame"></div>
+        </div>
+    </div>
+
+    <div class="interactive-grid"></div>
+    <div class="transition-grid"></div>
+
+    <!-- Back Button -->
+    <a href="/" class="auth-back">
+        <svg viewBox="0 0 24 24" stroke-width="2">
+            <line x1="19" y1="12" x2="5" y2="12" />
+            <polyline points="12 19 5 12 12 5" />
+        </svg>
+        Back to Home
+    </a>
+
+    <!-- Decorative Elements -->
+    <div class="auth-decoration top-left"></div>
+    <div class="auth-decoration bottom-right"></div>
+    <div class="auth-decoration corner-accent tl"></div>
+    <div class="auth-decoration corner-accent br"></div>
+
+    <!-- Auth Page -->
+    <section class="auth-page">
+        <div class="auth-container">
+            <!-- Header -->
+            <div class="auth-header">
+                <div class="auth-logo">
+                    <h2>IGNITE<span>'25</span></h2>
+                </div>
+                <p>[ IILM University Techfest ]</p>
+            </div>
+
+            <!-- Login Card -->
+            <div class="auth-card">
+                <div class="auth-title">
+                    <h3>Welcome Back</h3>
+                    <p>Sign in to access your dashboard</p>
+                </div>
+
+                <form class="auth-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password"
+                            required />
+                    </div>
+
+                    <div class="form-options">
+                        <label class="remember-me">
+                            <input type="checkbox" name="remember" />
+                            <span>Remember me</span>
+                        </label>
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="auth-submit">Sign In</button>
+                </form>
+
+                <div class="auth-divider">
+                    <span>Or continue with</span>
+                </div>
+
+                <div class="social-auth">
+                    <button class="social-btn">
+                        <svg viewBox="0 0 24 24" stroke-width="2">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                        </svg>
+                        Facebook
+                    </button>
+                    <button class="social-btn">
+                        <svg viewBox="0 0 24 24" stroke-width="2">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                        </svg>
+                        GitHub
+                    </button>
+                </div>
+
+                <div class="auth-footer">
+                    <p>Don't have an account? <a href="/register">Create Account</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page transition script -->
+    <script>
+        (function () {
+            if (sessionStorage.getItem("pageTransition") === "true") {
+                let s = document.createElement("style");
+                s.setAttribute("data-transition", "");
+                s.textContent = ".transition-grid{background-color:var(--base-400);pointer-events:auto;}";
+                (document.head || document.documentElement).appendChild(s);
+            }
+        })();
+    </script>
+
+    <!-- Scripts -->
+    <script type="module" src="/js/lenis-scroll.js"></script>
+    <script type="module" src="/js/preloader.js"></script>
+    <script type="module" src="/js/interactive-grid.js"></script>
+    <script type="module" src="/js/transition.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register | IGNITE Techfest 2025 | IILM University</title>
+    <link rel="icon" href="/logo.png" type="image/png" />
+    <meta name="author" content="IILM University" />
+
+    <link rel="stylesheet" href="/globals.css" />
+    <link rel="stylesheet" href="/css/interactive-grid.css" />
+    <link rel="stylesheet" href="/css/transition.css" />
+    <link rel="stylesheet" href="/css/preloader.css" />
+    <link rel="stylesheet" href="/css/auth.css" />
+
+    <style>
+        /* Register Page Specific - Horizontal Layout */
+        .auth-page.register-page .auth-container {
+            max-width: 800px;
+        }
+
+        .auth-page.register-page .auth-header {
+            margin-bottom: 1rem;
+        }
+
+        .auth-page.register-page .auth-card {
+            padding: 1.5rem 2rem;
+        }
+
+        .auth-page.register-page .auth-title {
+            margin-bottom: 1rem;
+        }
+
+        .register-form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem 1.5rem;
+        }
+
+        .register-form-grid .form-group {
+            gap: 0.25rem;
+        }
+
+        .register-form-grid .form-group input {
+            height: 42px;
+        }
+
+        .register-form-grid .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .register-bottom {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1rem;
+            align-items: center;
+        }
+
+        .register-bottom .auth-submit {
+            flex: 1;
+            margin-top: 0;
+            height: 46px;
+        }
+
+        .register-bottom .form-options {
+            flex: 1;
+            margin: 0;
+        }
+
+        .auth-page.register-page .auth-divider {
+            margin: 0.75rem 0;
+        }
+
+        .auth-page.register-page .social-auth {
+            gap: 0.75rem;
+        }
+
+        .auth-page.register-page .social-btn {
+            height: 40px;
+        }
+
+        .auth-page.register-page .auth-footer {
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 700px) {
+            .register-form-grid {
+                grid-template-columns: 1fr;
+                gap: 0.75rem;
+            }
+
+            .register-bottom {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+
+            .register-bottom .auth-submit,
+            .register-bottom .form-options {
+                width: 100%;
+            }
+
+            .auth-page.register-page .auth-container {
+                max-width: 480px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader-overlay">
+        <div class="preloader-grid"></div>
+        <div class="preloader-animation-wrapper">
+            <p class="preloader-text">Loading IGNITE</p>
+            <div class="preloader-ring-frame"></div>
+            <div class="preloader-disc-frame"></div>
+        </div>
+    </div>
+
+    <div class="interactive-grid"></div>
+    <div class="transition-grid"></div>
+
+    <!-- Back Button -->
+    <a href="/" class="auth-back">
+        <svg viewBox="0 0 24 24" stroke-width="2">
+            <line x1="19" y1="12" x2="5" y2="12" />
+            <polyline points="12 19 5 12 12 5" />
+        </svg>
+        Back to Home
+    </a>
+
+    <!-- Decorative Elements -->
+    <div class="auth-decoration top-left"></div>
+    <div class="auth-decoration bottom-right"></div>
+    <div class="auth-decoration corner-accent tl"></div>
+    <div class="auth-decoration corner-accent br"></div>
+
+    <!-- Auth Page -->
+    <section class="auth-page register-page">
+        <div class="auth-container">
+            <!-- Header -->
+            <div class="auth-header">
+                <div class="auth-logo">
+                    <h2>IGNITE<span>'25</span></h2>
+                </div>
+                <p>[ IILM University Techfest ]</p>
+            </div>
+
+            <!-- Register Card -->
+            <div class="auth-card">
+                <div class="auth-title">
+                    <h3>Create Account</h3>
+                    <p>Join IGNITE Techfest 2025</p>
+                </div>
+
+                <form action="#" method="POST">
+                    <div class="register-form-grid">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" placeholder="First name" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" placeholder="Last name" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="college">College / University</label>
+                            <input type="text" id="college" name="college" placeholder="Institution name" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="course">Course / Branch</label>
+                            <input type="text" id="course" name="course" placeholder="e.g. B.Tech CSE" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" placeholder="Create password"
+                                required />
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword"
+                                placeholder="Confirm password" required />
+                        </div>
+                    </div>
+
+                    <div class="register-bottom">
+                        <div class="form-options">
+                            <label class="remember-me">
+                                <input type="checkbox" name="terms" required />
+                                <span>I agree to the <a href="#" class="forgot-password">Terms & Conditions</a></span>
+                            </label>
+                        </div>
+                        <button type="submit" class="auth-submit">Create Account</button>
+                    </div>
+                </form>
+
+                <div class="auth-divider">
+                    <span>Or sign up with</span>
+                </div>
+
+                <div class="social-auth">
+                    <button class="social-btn">
+                        <svg viewBox="0 0 24 24" stroke-width="2">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                        </svg>
+                        Facebook
+                    </button>
+                    <button class="social-btn">
+                        <svg viewBox="0 0 24 24" stroke-width="2">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                        </svg>
+                        GitHub
+                    </button>
+                </div>
+
+                <div class="auth-footer">
+                    <p>Already have an account? <a href="/login">Sign In</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page transition script -->
+    <script>
+        (function () {
+            if (sessionStorage.getItem("pageTransition") === "true") {
+                let s = document.createElement("style");
+                s.setAttribute("data-transition", "");
+                s.textContent = ".transition-grid{background-color:var(--base-400);pointer-events:auto;}";
+                (document.head || document.documentElement).appendChild(s);
+            }
+        })();
+    </script>
+
+    <!-- Scripts -->
+    <script type="module" src="/js/lenis-scroll.js"></script>
+    <script type="module" src="/js/preloader.js"></script>
+    <script type="module" src="/js/interactive-grid.js"></script>
+    <script type="module" src="/js/transition.js"></script>
+</body>
+
+</html>

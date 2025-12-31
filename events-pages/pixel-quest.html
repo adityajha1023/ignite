@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixel Quest | IGNITE Techfest 2025 | IILM University</title>
+    <link rel="icon" href="/logo.png" type="image/png" />
+    <meta name="author" content="IILM University" />
+
+    <link rel="stylesheet" href="/globals.css" />
+    <link rel="stylesheet" href="/css/nav.css" />
+    <link rel="stylesheet" href="/css/interactive-grid.css" />
+    <link rel="stylesheet" href="/css/transition.css" />
+    <link rel="stylesheet" href="/css/preloader.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/event.css" />
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader-overlay">
+        <div class="preloader-grid"></div>
+        <div class="preloader-animation-wrapper">
+            <p class="preloader-text">Loading IGNITE</p>
+            <div class="preloader-ring-frame"></div>
+            <div class="preloader-disc-frame"></div>
+        </div>
+    </div>
+
+    <!-- SVG Filter for goo effect -->
+    <svg style="visibility: hidden; position: absolute" width="0" height="0" xmlns="http://www.w3.org/2000/svg"
+        version="1.1">
+        <defs>
+            <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+                    result="goo" />
+                <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+            </filter>
+        </defs>
+    </svg>
+
+    <div class="interactive-grid"></div>
+    <div class="transition-grid"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-bg"></div>
+        </div>
+
+        <div class="nav-overlay">
+            <div class="nav-items">
+                <div class="nav-item"><a href="/">Home</a></div>
+                <div class="nav-item"><a href="/about">About</a></div>
+                <div class="nav-item"><a href="/events">Events</a></div>
+                <div class="nav-item"><a href="/gallery">Gallery</a></div>
+                <div class="nav-item"><a href="/contact">Contact</a></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero event-hero">
+        <div class="hero-container">
+            <div class="hero-img-container">
+                <div class="hero-img-overlay"></div>
+                <div class="hero-img-gradient"></div>
+            </div>
+
+            <div class="hero-content">
+                <div class="container">
+                    <div class="hero-content-nav">
+                        <div class="hero-timer">
+                            <p>Tech Event</p>
+                        </div>
+                    </div>
+
+                    <div class="hero-content-footer">
+                        <div class="hero-content-header">
+                            <h1 data-animate-variant="slide" data-animate-delay="0.6">
+                                Pixel Quest
+                            </h1>
+                            <div class="event-tagline">
+                                <p>"Capture the Essence of Tech Fest"</p>
+                            </div>
+                        </div>
+
+                        <div class="hero-callout">
+                            <p data-animate-variant="flicker" data-animate-delay="0.85">
+                                Registration Fee / ₹100
+                            </p>
+                            <p data-animate-variant="flicker" data-animate-delay="1">
+                                15th & 16th April 2025
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Details Section -->
+    <section class="event-details">
+        <div class="container">
+            <div class="event-details-bg-wrapper">
+                <div class="event-details-bg"></div>
+            </div>
+
+            <!-- Event Info Cards -->
+            <div class="event-info-grid">
+                <div class="event-info-card">
+                    <div class="info-label">
+                        <p>Registration Fee</p>
+                    </div>
+                    <div class="info-value">
+                        <h3>₹100</h3>
+                    </div>
+                </div>
+                <div class="event-info-card">
+                    <div class="info-label">
+                        <p>Event Category</p>
+                    </div>
+                    <div class="info-value">
+                        <h3>Tech Event</h3>
+                    </div>
+                </div>
+                <div class="event-info-card">
+                    <div class="info-label">
+                        <p>Participation</p>
+                    </div>
+                    <div class="info-value">
+                        <h3>Individual</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Description -->
+            <div class="event-description">
+                <p class="bodyCopy lg">
+                    Tech Fest Social Snapshot Challenge - capture the essence of the fest through creative imagery!
+                    Showcase your photography and videography skills by documenting the best moments of IGNITE 2025
+                    and sharing them on social media for the world to see.
+                </p>
+            </div>
+
+            <!-- Competition Rules -->
+            <div class="event-section">
+                <div class="section-header">
+                    <h3>Competition Rules</h3>
+                    <p>[ Guidelines ]</p>
+                </div>
+
+                <div class="event-specs">
+                    <div class="spec-item">
+                        <div class="spec-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                                <circle cx="12" cy="7" r="4" />
+                            </svg>
+                        </div>
+                        <div class="spec-content">
+                            <p>Individual entries only - no teams allowed</p>
+                        </div>
+                    </div>
+
+                    <div class="spec-item">
+                        <div class="spec-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                                <circle cx="8.5" cy="8.5" r="1.5" />
+                                <polyline points="21 15 16 10 5 21" />
+                            </svg>
+                        </div>
+                        <div class="spec-content">
+                            <p>Post snapshots, videos, or reels on social media platforms</p>
+                        </div>
+                    </div>
+
+                    <div class="spec-item">
+                        <div class="spec-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                                <circle cx="18" cy="5" r="3" />
+                                <circle cx="6" cy="12" r="3" />
+                                <circle cx="18" cy="19" r="3" />
+                                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+                                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+                            </svg>
+                        </div>
+                        <div class="spec-content">
+                            <p>Platforms: LinkedIn, Instagram, Twitter (X), Facebook</p>
+                        </div>
+                    </div>
+
+                    <div class="spec-item">
+                        <div class="spec-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                                <line x1="4" y1="9" x2="20" y2="9" />
+                                <line x1="4" y1="15" x2="20" y2="15" />
+                                <line x1="10" y1="3" x2="8" y2="21" />
+                                <line x1="16" y1="3" x2="14" y2="21" />
+                            </svg>
+                        </div>
+                        <div class="spec-content">
+                            <p>Must include official event hashtag and tag the event page</p>
+                        </div>
+                    </div>
+
+                    <div class="spec-item">
+                        <div class="spec-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg>
+                        </div>
+                        <div class="spec-content">
+                            <p>Judged on creativity, relevance, and visual impact</p>
+                        </div>
+                    </div>
+
+                    <div class="spec-item">
+                        <div class="spec-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                                <path
+                                    d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3" />
+                            </svg>
+                        </div>
+                        <div class="spec-content">
+                            <p>Public voting may contribute to final scores</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Ideas -->
+            <div class="event-section">
+                <div class="section-header">
+                    <h3>Content Ideas</h3>
+                    <p>[ What to Capture ]</p>
+                </div>
+
+                <div class="event-outcomes">
+                    <div class="outcome-item">
+                        <div class="outcome-check">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                        </div>
+                        <p>Event highlights & moments</p>
+                    </div>
+
+                    <div class="outcome-item">
+                        <div class="outcome-check">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                        </div>
+                        <p>Behind-the-scenes footage</p>
+                    </div>
+
+                    <div class="outcome-item">
+                        <div class="outcome-check">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                        </div>
+                        <p>Candid participant shots</p>
+                    </div>
+
+                    <div class="outcome-item">
+                        <div class="outcome-check">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                        </div>
+                        <p>Tech exhibits & displays</p>
+                    </div>
+
+                    <div class="outcome-item">
+                        <div class="outcome-check">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                        </div>
+                        <p>Creative reels & edits</p>
+                    </div>
+
+                    <div class="outcome-item">
+                        <div class="outcome-check">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                        </div>
+                        <p>Venue & ambiance shots</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coordinators -->
+            <div class="event-section">
+                <div class="section-header">
+                    <h3>Event Coordinators</h3>
+                    <p>[ Contact ]</p>
+                </div>
+
+                <div class="event-coordinators">
+                    <!-- Faculty Coordinators -->
+                    <div class="coordinator-group">
+                        <div class="coordinator-group-title">
+                            <p>Faculty Coordinators</p>
+                        </div>
+                        <div class="coordinator-cards">
+                            <div class="coordinator-card">
+                                <div class="coordinator-info">
+                                    <p class="name">Ms. Ankita Agarwal</p>
+                                    <p class="phone">Faculty Coordinator</p>
+                                </div>
+                                <div class="contact-icon faculty-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                                        <circle cx="12" cy="7" r="4" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="coordinator-card">
+                                <div class="coordinator-info">
+                                    <p class="name">Dr. Prince</p>
+                                    <p class="phone">Faculty Coordinator</p>
+                                </div>
+                                <div class="contact-icon faculty-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                                        <circle cx="12" cy="7" r="4" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Student Coordinators -->
+                    <div class="coordinator-group">
+                        <div class="coordinator-group-title">
+                            <p>Student Coordinators</p>
+                        </div>
+                        <div class="coordinator-cards">
+                            <div class="coordinator-card">
+                                <div class="coordinator-info">
+                                    <p class="name">Palak</p>
+                                    <p class="phone">+91 8487977990</p>
+                                </div>
+                                <a href="tel:+918487977990" class="contact-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="coordinator-card">
+                                <div class="coordinator-info">
+                                    <p class="name">Krish</p>
+                                    <p class="phone">+91 8595851220</p>
+                                </div>
+                                <a href="tel:+918595851220" class="contact-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Register CTA -->
+            <div class="event-register">
+                <div class="register-content">
+                    <h3>Ready to Capture the Moments?</h3>
+                    <p class="bodyCopy">Register now and showcase your photography skills at IGNITE Techfest 2025!</p>
+                </div>
+                <div class="btn">
+                    <a href="/register" class="btn"><span class="btn-line"></span>Register Now</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-bg-container"></div>
+
+            <div class="footer-content">
+                <div class="footer-content-meta">
+                    <div class="footer-content-col">
+                        <h3>Stay updated with IGNITE 2025</h3>
+                        <div class="footer-form">
+                            <input type="text" placeholder="Your Email" />
+                            <div class="btn">
+                                <a href="/contact" class="btn"><span class="btn-line"></span>Subscribe</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer-content-col">
+                        <p class="bodyCopy">
+                            IGNITE Techfest is the flagship annual technical fest of IILM University,
+                            Greater Noida. Known for its energy, innovation, and competitive spirit,
+                            bringing together students and industry partners on one platform.
+                        </p>
+                        <div class="footer-socials">
+                            <div class="footer-social"><a href="https://www.instagram.com/ignite_iilm">[ Instagram
+                                    ]</a>
+                            </div>
+                            <div class="footer-social"><a href="https://iilmignite.com">[ Website ]</a></div>
+                            <div class="footer-social"><a href="mailto:ignite.techfest@iilm.edu">[ Email ]</a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-content-meta">
+                    <div class="footer-content-col">
+                        <p>[ IILM University, Greater Noida ]</p>
+                    </div>
+                    <div class="footer-content-col">
+                        <div class="footer-logo">
+                            <h1>IGNITE 2025&copy;</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Page transition script -->
+    <script>
+        (function () {
+            if (sessionStorage.getItem("pageTransition") === "true") {
+                let s = document.createElement("style");
+                s.setAttribute("data-transition", "");
+                s.textContent = ".transition-grid{background-color:var(--base-400);pointer-events:auto;}";
+                (document.head || document.documentElement).appendChild(s);
+            }
+        })();
+    </script>
+
+    <!-- Scripts -->
+    <script type="module" src="/js/lenis-scroll.js"></script>
+    <script type="module" src="/js/preloader.js"></script>
+    <script type="module" src="/js/nav.js"></script>
+    <script type="module" src="/js/interactive-grid.js"></script>
+    <script type="module" src="/js/transition.js"></script>
+    <script type="module" src="/js/home.js"></script>
+    <script type="module" src="/js/animated-copy.js"></script>
+    <script type="module" src="/js/prefetch-gallery.js"></script>
+</body>
+
+</html>
