@@ -17,7 +17,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(ellipse at 50% 0%, rgba(238, 100, 54, 0.08) 0%, transparent 60%);
+    background: radial-gradient(ellipse at 50% 0%, rgba(59, 130, 246, 0.08) 0%, transparent 60%);
     pointer-events: none;
 }
 
@@ -138,11 +138,11 @@
 
 .form-group input:focus {
     border-color: var(--base-500);
-    box-shadow: 0 0 0 2px rgba(238, 100, 54, 0.1);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
 }
 
 .form-group input:hover {
-    border-color: rgba(238, 100, 54, 0.4);
+    border-color: rgba(59, 130, 246, 0.4);
 }
 
 .form-row {
@@ -195,7 +195,7 @@
     width: 100%;
     height: 48px;
     margin-top: 0.5rem;
-    background: linear-gradient(135deg, var(--base-500), #d45a2e);
+    background: linear-gradient(135deg, var(--base-500), #2563eb);
     border: none;
     color: var(--base-100);
     font-family: "Geist Mono", monospace;
@@ -226,7 +226,7 @@
 
 .auth-submit:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(238, 100, 54, 0.3);
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
 }
 
 .auth-submit:active {

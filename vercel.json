@@ -39,40 +39,8 @@
       "destination": "/terms.html"
     },
     {
-      "source": "/events/just-a-minute",
-      "destination": "/events-pages/just-a-minute.html"
-    },
-    {
-      "source": "/events/model-exhibition-college",
-      "destination": "/events-pages/model-exhibition-college.html"
-    },
-    {
-      "source": "/events/model-exhibition",
-      "destination": "/events-pages/model-exhibition.html"
-    },
-    {
-      "source": "/events/pixel-quest",
-      "destination": "/events-pages/pixel-quest.html"
-    },
-    {
-      "source": "/events/poster-presentation",
-      "destination": "/events-pages/poster-presentation.html"
-    },
-    {
-      "source": "/events/robo-race",
-      "destination": "/events-pages/robo-race.html"
-    },
-    {
-      "source": "/events/tech-art-and-design-competition",
-      "destination": "/events-pages/tech-art-and-design-competition.html"
-    },
-    {
-      "source": "/events/tech-treasure-hunt",
-      "destination": "/events-pages/tech-treasure-hunt.html"
-    },
-    {
-      "source": "/events/technical-quiz-competition",
-      "destination": "/events-pages/technical-quiz-competition.html"
+      "source": "/events-pages/:path*",
+      "destination": "/events-pages/:path*.html"
     }
   ]
 }

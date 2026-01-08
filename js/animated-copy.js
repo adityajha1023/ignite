@@ -120,20 +120,34 @@ function initFlickerAnimation(element, isPreloaderShowing, heroContent) {
 // hero timer - flicker reveal animation
 function initHeroTimerAnimation() {
   const heroTimer = document.querySelector(".hero-timer");
-  if (!heroTimer) return;
+  const heroLogo = document.querySelector(".hero-logo");
 
   const preloaderOverlay = document.querySelector(".preloader-overlay");
   const hasSeenPreloader = sessionStorage.getItem("preloaderSeen") === "true";
   const isPreloaderShowing = !!preloaderOverlay && !hasSeenPreloader;
   const timerDelay = isPreloaderShowing ? 1 + 2 : 1;
 
-  gsap.set(heroTimer, { opacity: 0 });
+  if (heroTimer) {
+    gsap.set(heroTimer, { opacity: 0 });
 
-  gsap.to(heroTimer, {
-    delay: timerDelay,
-    duration: 0.1,
-    opacity: 1,
-    ease: "power2.inOut",
-    repeat: 4,
-  });
+    gsap.to(heroTimer, {
+      delay: timerDelay,
+      duration: 0.1,
+      opacity: 1,
+      ease: "power2.inOut",
+      repeat: 4,
+    });
+  }
+
+  if (heroLogo) {
+    gsap.set(heroLogo, { opacity: 0 });
+
+    gsap.to(heroLogo, {
+      delay: timerDelay,
+      duration: 0.1,
+      opacity: 1,
+      ease: "power2.inOut",
+      repeat: 4,
+    });
+  }
 }

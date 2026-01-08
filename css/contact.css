@@ -2,7 +2,7 @@
 .hero.contact-hero {
   height: 60svh;
   max-width: 2000px;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
 .hero.contact-hero .hero-container .hero-img-container {
@@ -263,7 +263,7 @@
   .form-item
   .btn
   a.btn {
-  background-color: var(--base-100);
+  background-color: var(--base-400);
 }
 
 /* contact - faq section */

@@ -25,7 +25,7 @@ IGNITE brings together students, innovators,
 tech enthusiasts, and industry partners on one
 platform. What's New This Year
 • 35+ Technical Events across multiple domains
-• Prize Pool worth 71.75 Lakhs+
+• Prize Pool worth 1.75 Lakhs+
 • Expanded participation from multiple
 universities and institutions
 • Hands-on workshops, competitions,

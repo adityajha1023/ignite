@@ -69,8 +69,16 @@ footer .footer-content-col p {
   margin-bottom: 3rem;
 }
 
+footer .footer-form {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 footer input {
   width: 50%;
+  min-width: 200px;
   border: none;
   outline: none;
   padding: 1.5rem;
@@ -139,9 +147,30 @@ footer .footer-logo {
   gap: 1rem;
 }
 
+/* Footer logo specific styles - highest specificity */
+footer .footer-content .footer-content-meta .footer-content-col h1 img.footer-logo-img {
+  width: clamp(360px, 30vw, 500px) !important;
+  height: auto !important;
+  max-width: 100% !important;
+  object-fit: contain !important;
+}
+
+footer .footer-content-col h1 img.footer-logo-img {
+  width: clamp(360px, 30vw, 500px) !important;
+  height: auto !important;
+  max-width: 100% !important;
+  object-fit: contain !important;
+}
+
 footer .footer-logo img {
-  width: 60px;
+  width: clamp(360px, 30vw, 500px) !important;
   height: auto;
+}
+
+footer .footer-logo-img {
+  width: clamp(360px, 30vw, 500px) !important;
+  height: auto !important;
+  max-width: 100% !important;
 }
 
 footer .footer-content-meta:nth-child(2) .footer-content-col:nth-child(1) {
@@ -177,7 +206,13 @@ footer .footer-content-meta:nth-child(2) p {
 
   footer input {
     width: 100%;
+    min-width: unset;
     margin-bottom: 0.5rem;
+  }
+
+  footer .footer-form {
+    flex-direction: column;
+    align-items: stretch;
   }
 
   footer .footer-content-meta:nth-child(1) {
@@ -195,5 +230,35 @@ footer .footer-content-meta:nth-child(2) p {
   footer .footer-content-meta:nth-child(2) .footer-content-col:nth-child(1) {
     flex-direction: column-reverse;
     gap: 0.25rem;
+  }
+
+  /* Mobile footer logo styles - highest specificity */
+  footer .footer-content .footer-content-meta .footer-content-col h1 img.footer-logo-img,
+  footer .footer-content-col h1 img.footer-logo-img,
+  footer .footer-logo img,
+  footer .footer-logo-img {
+    width: clamp(360px, 30vw, 500px) !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+}
+
+/* Final override to ensure footer logo sizing works */
+footer img.footer-logo-img,
+footer .footer-logo-img,
+footer .footer-content-col img[src*="logo"] {
+  width: clamp(360px, 30vw, 500px) !important;
+  height: auto !important;
+  object-fit: contain !important;
+  max-width: none !important;
+}
+
+@media (max-width: 1000px) {
+  footer img.footer-logo-img,
+  footer .footer-logo-img,
+  footer .footer-content-col img[src*="logo"] {
+    width: clamp(360px, 30vw, 500px) !important;
+    height: auto !important;
+    object-fit: contain !important;
   }
 }
