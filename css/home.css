@@ -242,11 +242,12 @@
   width: 70%;
 }
 
-.intro .container .intro-copy .intro-copy-wrapper h3 {
-  color: var(--base-300);
+.intro .container .intro-copy .intro-copy-wrapper p {
+  color: var(--base-100);
+  
 }
 
-.intro .container .intro-copy .intro-copy-wrapper h3 .char {
+.intro .container .intro-copy .intro-copy-wrapper p .char {
   display: inline-block;
   will-change: color;
 }
